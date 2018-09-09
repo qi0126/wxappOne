@@ -1,0 +1,49 @@
+<!--pages/index/index/index.wxml-->
+<import src="../productItem/productItem.wxml" />
+<view>
+  <view class='search'>
+     <image class="search-img" src="/images/index/icon-sear.png"></image>
+     <input type="text" bindtap='searchFun' placeholder="搜索你的闪耀配饰" placeholder-class="placeholder" class='searchInput' value='{{searchValue}}'/>
+  </view>
+
+  <view class='bgWrap'>
+      <image src='/images/index/img-bg1.jpg' class='bgImg'></image>
+      <view class='textCenter'>
+        <image class='imgFilter' src="/images/index/img-bg.png"></image>
+        <view class='centerWrap'>
+            <view class='storeName'> EZJEWELRY</view>
+            <view class='shopText'> 至臻至简，向自然美态致敬</view>
+            <view class='shop' bindtap='shopDes'> 与您一起了解店铺<image src='/images/index/Group Copy 2.png'></image></view>
+        </view>
+      </view>
+  </view>
+  <!-- 店 -->
+  <view class='shopIntro' wx:if="{{shopName}}">
+      <view class='shopTitle'>
+          <image src="/images/index/Oval.png" class='smallSpot'></image>
+          <view class='shopName'>
+              EZJEWELRY
+          </view>
+      </view>
+
+      <view class='shopDesWrap'>
+        <view class="shopDes">
+            <view>海瑞温斯顿珠宝设计团队在皇家花园系列</view> (royal gardens)的创作过程中，被发表过的珍贵设计草图，其中包括跟随了海瑞温斯顿先生长达40余年的首席珠宝设计师辛德先生 (mr. ambaji v. shinde)的创造手稿。 他的创作灵感源自于大自然万物最原始纯真的天然美感，就如花草树木的生活轮廓及优雅流畅的天然形态。 时至今日，大自然依然是海瑞温斯顿历久不衰的灵感缪斯，通过珠宝设计团队与技艺精湛的工匠协力合作， 雕琢出颗颗璀璨的宝石， 更使这些稀世珍宝能随着佩戴者举手投足的光影流动，绽放出绚烂夺目的光彩
+        </view>
+      </view>
+  </view>
+  <!-- 产品 -->
+  <view class='product'>
+    <view class='productTitle'>甄选·引荐</view>
+
+    <view class='productTitlebar'>
+      <image src='/images/index/choose.png'></image>
+    </view>
+
+    <!-- item -->
+    <template is="prodListTpl"/>
+    <template is="prodListTpl"/>
+    <template is="prodListTpl"/>
+  </view>
+
+</view>

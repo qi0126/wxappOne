@@ -1,0 +1,89 @@
+<view class='tab'>
+  <view class='{{orderStatus === "1" ? "active": ""}}' data-status='1' catchtap='changeStatusClick'>全部</view>
+  <view class='{{orderStatus === "2" ? "active": ""}}' data-status='2' catchtap='changeStatusClick'>待支付</view>
+  <view class='{{orderStatus === "3" ? "active": ""}}' data-status='3' catchtap='changeStatusClick'>待发货</view>
+  <view class='{{orderStatus === "4" ? "active": ""}}' data-status='4' catchtap='changeStatusClick'>已完成</view>
+</view>
+
+<view wx:if='{{list.length !== 0}}'>
+  <view class='item' wx:for="{{list}}" wx:key='orderNo' data-item='{{item}}' catchtap='goOrderDetail'>
+    <view class='top'>
+      <scroll-view scroll-x='true'>
+        <view class='top-imgs'>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+          <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='middle'>
+      <view>
+        <text>共2件</text>
+        <text> <text>需付金额：</text>
+        <text style='font-size: 32rpx;'>¥13636.00</text> </text>
+      </view>
+    </view>
+    <view class='bottom'>
+      <view class='b-status'>
+        <view class='bs-dot'></view>
+        <text>待发货</text>
+      </view>
+      <view class='b-btn'>
+        <view catchtap='goOrderDetail'>去支付</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='item' wx:for="{{list}}" wx:key='orderNo' data-item='{{item}}' catchtap='goOrderDetail'>
+    <view class='top oneTop'>
+      <view class='oneTop-img'>
+        <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+      </view>
+      <view class='t-right'>
+        <view class='r-tit'>灵蛇耳环耳饰崇自然的 设计洋溢极致灵动设计洋溢极致灵动设计洋溢极致灵动设计洋溢极致灵动</view>
+        <view class='r-exted'>
+          <view class='re-left'>
+            <text> 材质： <text></text>pt950</text>
+            <text> 尺寸：<text></text>15</text>
+          </view>
+          <view class='re-right'>X1</view>
+        </view>
+        <view class='r-price'>¥ 26998.00</view>
+      </view>
+    </view>
+    
+    <view class='bottom'>
+      <view class='b-status'>
+        <view class='bs-dot'></view>
+        <text>待发货</text>
+      </view>
+      <view class='b-price'>
+        <text> <text>共计：</text>
+        <text style='font-size: 32rpx;'>¥13636.00</text> </text>
+      </view>
+      <view class='b-btn'>
+        <view>去支付</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='loadmore' hidden='{{result.rowSize < 4}}'>
+    <view class="loading_box" hidden="{{loadMore}}">
+      <view class="loading_rotate_cube_parent">
+        <view class="loading_rotate_cube"></view>
+      </view>
+    </view>
+    <text hidden="{{!loadMore}}">没有更多数据了</text>
+  </view>
+
+</view>
+
+<view class='nothing' hidden='{{list.length !== 0}}'>
+  <image src='/images/img-noorder.png' mode='widthFix' style='width: 170rpx; margin-top: 240rpx; margin-bottom: 60rpx'></image>
+  <view>~ 亲，暂无订单 ~</view>
+</view>

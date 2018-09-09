@@ -1,0 +1,86 @@
+<view class='head'>
+  <view class='h-cont'>
+    <image mode='widthFix' style='width: 186rpx; height: 186rpx'></image>
+    <view>Jennifer</view>
+  </view>
+</view>
+
+<view class='listWrap'>
+
+  <view class='m-item' catchtap='goWishList'>
+    <view class='m-left'>
+      <view class='ml-tit'>我的心愿单</view>
+      <view class='ml-num'>5</view>
+    </view>
+    <view class='m-img'>
+      <view class='mi-box'>
+        <image mode='widthFix' style='width: 100rpx; height: 100rpx'></image>
+        <!-- <view class='mi-tag'>未发货</view> -->
+      </view>
+      <view class='mi-box'>
+        <image mode='widthFix' style='width: 100rpx; height: 100rpx'></image>
+        <!-- <view class='mi-tag'>未发货</view> -->
+      </view>
+      <view class='mi-box'>
+        <image mode='widthFix' style='width: 100rpx; height: 100rpx'></image>
+        <!-- <view class='mi-tag'>未发货</view> -->
+      </view>
+    </view>
+    <view class='m-dot'>
+      <image mode='widthFix' style='width: 100rpx; height: 20rpx'></image>
+    </view>
+    <view class='m-arrows'>
+      <image mode='widthFix' style='width: 28rpx; height: 28rpx'></image>
+    </view>
+  </view>
+
+  <view class='m-item' catchtap='goOrder'>
+    <view class='m-left'>
+      <view class='ml-tit'>我的订单</view>
+      <view class='ml-num'>5</view>
+    </view>
+    <view class='m-img'>
+      <view class='mi-box'>
+        <image mode='widthFix' style='width: 100rpx; height: 100rpx'></image>
+        <view class='mi-tag'>未发货</view>
+      </view>
+      <view class='mi-box'>
+        <image mode='widthFix' style='width: 100rpx; height: 100rpx'></image>
+        <view class='mi-tag'>未发货</view>
+      </view>
+    </view>
+    <view class='m-dot'>
+      <image mode='widthFix' style='width: 100rpx; height: 20rpx'></image>
+    </view>
+    <view class='m-arrows'>
+      <image mode='widthFix' style='width: 28rpx; height: 28rpx'></image>
+    </view>
+  </view>
+
+  <view class='m-item' catchtap='goAddr'>
+    <view class='m-left'>
+      <view class='ml-tit'>收获地址</view>
+      <view class='ml-num'>1</view>
+    </view>
+
+    <view class='m-arrows'>
+      <image mode='widthFix' style='width: 28rpx; height: 28rpx'></image>
+    </view>
+  </view>
+
+  <view class='m-item' catchtap='goContact'>
+    <view class='m-left'>
+      <view class='ml-tit'>联系客服</view>
+    </view>
+
+    <view class='m-arrows'>
+      <image mode='widthFix' style='width: 28rpx; height: 28rpx'></image>
+    </view>
+  </view>
+
+</view>
+
+<view>
+
+
+</view>

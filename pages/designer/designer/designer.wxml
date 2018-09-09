@@ -1,0 +1,17 @@
+<view>
+  <view class='search'>
+     <image class="search_icon search-img" src="/images/index/icon-sear.png"></image>
+     <input type="text" placeholder="搜索你的闪耀配饰" placeholder-class="placeholder" class='searchInput'/>
+  </view>
+  <view class="indexImgBigDiv">
+    <image src="/images/designer/designerIndex.jpg" class="designerIndex"/>
+    <view class="indexTxtDiv">
+      <view class="indexTxtOne">全球甄选珠宝设计师</view>
+      <view class="indexTxtTwo">与您一起探索作品</view>
+      <view class="enterImgDiv" bindtap='EnterDesignerPro'>
+        <image src="/images/designer/designerIndexTxtBack.png" class="designerIndexTxtBack"/>
+        <view class="enterImgTxt">选购珠宝作品</view>
+      </view>
+    </view>
+  </view>
+</view>

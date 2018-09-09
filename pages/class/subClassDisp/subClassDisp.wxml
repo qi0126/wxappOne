@@ -1,0 +1,84 @@
+<view class="topMenuOne" style="flex-direction:row;">
+  <view class="topOneLeft">
+    <image src="/images/index/proPoint.png" class="proPoint" /> 项链
+    <span class="leftPonitTwo">
+      <image src="/images/index/icon-back.png" class="icon-back"/>
+    </span>
+  </view>
+  <view class="topOneRigth">
+    <span class="topRigthBtn"><button class="btn btn-default selectBtnOne" bindtap="show">筛选</button></span>
+    <span class="topRigthImg"><image src="/images/index/icon-shop.png"  class="icon-shop" /></span>
+  </view>
+</view>
+<view class="flex-wrp">
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00<span><image src="/images/index/love.png" class="love"/></span>
+    </view>
+  </view>
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00<span><image src="/images/index/love.png" class="love"/></span>
+    </view>
+  </view>
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00<span><image src="/images/index/love.png" class="love"/></span>
+    </view>
+  </view>
+
+</view>
+
+<!-- 筛选弹出层 -->
+<view class="modal-box" hidden="{{flag}}" >
+    <view class="modal-body">
+      <view class="modal-content">
+        <view class="modalBoxTop">筛选</view>
+        <view class="modalBoxCC">
+          <view class="selectedSubDiv">
+            <view class="subDivOne">
+              <view class="subDivName">适合人群</view>
+              <view class="subDivFlex">
+                <view class="checkboxListDiv" wx:for="{{manList}}" wx:key="id">
+                  <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='ManCheckbox'/> {{item.value}}
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="selectedSubDiv">
+            <view class="subDivOne">
+              <view class="subDivName">价格</view>
+              <view class="subDivFlex">
+                <view class="checkboxListDiv" wx:for="{{priceList}}" wx:key="id">
+                  <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='PriceCheckbox'/> {{item.value}}
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="selectedSubDiv">
+            <view class="subDivOne">
+              <view class="subDivName">材质</view>
+              <view class="subDivFlex">
+                <view class="checkboxListDiv" wx:for="{{materList}}" wx:key="id">
+                  <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='MaterCheckbox'/> {{item.value}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="modalBoxBottom">
+          <view class="boxBottomLeft">全部重置</view>
+          <view class="boxBottomRight" bindtap="hide">搜索</view>
+        </view>
+      </view>
+    </view>
+    <view class="modal-right" bindtap="hide">
+      <image src='/images/class/returnWin.png' class="returnWin"/>
+    </view>
+  </view>

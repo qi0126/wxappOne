@@ -1,0 +1,12 @@
+<template name="prodListTpl">
+    <view class='productItem' bindtap="goProductDetail">
+      <image src='/images/index/demo1.png'></image>
+      <view class='productTip'>Serpenti灵蛇耳环耳饰崇自然的</view>
+      <view class='productTip'>设计洋溢极致灵</view>
+      <view class='Price'>k金  <view class='line'>|</view> PT950</view>
+
+      <view class='buybtn'>
+        > Buy Now
+      </view>
+    </view>
+</template>

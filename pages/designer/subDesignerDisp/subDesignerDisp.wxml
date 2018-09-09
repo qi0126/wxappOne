@@ -1,0 +1,221 @@
+<view class="topMenuOne" style="flex-direction:row;">
+  <view class="topOneLeft" bindtap="designerShow">
+    <image src="/images/index/proPoint.png" class="proPoint" /> 设计师
+    <span class="leftPonitTwo">
+      <image src="/images/index/icon-back.png" class="icon-back" />
+    </span>
+    <span class="leftTxtThree">
+      Christy Brinkley
+    </span>
+  </view>
+  <view class="topOneRigth">
+    <span class="topRigthBtn">
+      <button class="btn btn-default selectBtnOne" bindtap="show">筛选</button>
+    </span>
+    <span class="topRigthImg">
+      <image src="/images/index/icon-shop.png" class="icon-shop" />
+    </span>
+  </view>
+</view>
+<view class="flex-wrp">
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00
+      <span>
+        <image src="/images/index/love.png" class="love" />
+      </span>
+    </view>
+  </view>
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00
+      <span>
+        <image src="/images/index/love.png" class="love" />
+      </span>
+    </view>
+  </view>
+  <view class="flex-item imDispBigDiv">
+    <view class="imgDisp"></view>
+    <view class="imgNameTop">Serpenti灵蛇耳环耳饰.....</view>
+    <view class="imgPriceDiv">
+      ¥ 12896.00
+      <span>
+        <image src="/images/index/love.png" class="love" />
+      </span>
+    </view>
+  </view>
+
+</view>
+
+<!-- 筛选弹出层 -->
+<view class="modal-box" hidden="{{flag}}">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class="modalBoxTop">筛选</view>
+      <view class="modalBoxCC">
+        <view class="selectedSubDiv">
+          <view class="subDivOne">
+            <view class="subDivName">适合人群</view>
+            <view class="subDivFlex">
+              <view class="checkboxListDiv" wx:for="{{manList}}" wx:key="id">
+                <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='ManCheckbox' /> {{item.value}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="selectedSubDiv">
+          <view class="subDivOne">
+            <view class="subDivName">系列</view>
+            <view class="subDivFlex">
+              <view class="checkboxListDiv" wx:for="{{seriesList}}" wx:key="id">
+                <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='ManCheckbox' /> {{item.value}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="selectedSubDiv">
+          <view class="subDivOne">
+            <view class="subDivName">分类</view>
+            <view class="subDivFlex">
+              <view class="checkboxListDiv" wx:for="{{classList}}" wx:key="id">
+                <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='ManCheckbox' /> {{item.value}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="selectedSubDiv">
+          <view class="subDivOne">
+            <view class="subDivName">价格</view>
+            <view class="subDivFlex">
+              <view class="checkboxListDiv" wx:for="{{priceList}}" wx:key="id">
+                <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='PriceCheckbox' /> {{item.value}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="selectedSubDiv">
+          <view class="subDivOne">
+            <view class="subDivName">材质</view>
+            <view class="subDivFlex">
+              <view class="checkboxListDiv" wx:for="{{materList}}" wx:key="id">
+                <image src='{{item.checked==true ? imgStatus.a : imgStatus.b}}' class="checkedTrue" data-item='{{item}}' catchtap='MaterCheckbox' /> {{item.value}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="modalBoxBottom">
+        <view class="boxBottomLeft">全部重置</view>
+        <view class="boxBottomRight" bindtap="hide">搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class="modal-right" bindtap="hide">
+    <image src='/images/class/returnWin.png' class="returnWin" />
+  </view>
+</view>
+
+
+
+<!-- 设计师弹出层 -->
+<view class="modal-box" hidden="{{designerFlag}}">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class="modalCC">
+        <view class="modalBoxTop">
+          <view class='search'>
+            <image class="search_icon search-img" src="/images/index/icon-sear.png"></image>
+            <input type="text" placeholder="搜索设计师" placeholder-class="placeholder" class='searchInput' />
+          </view>
+        </view>
+        <view class="modalBoxTwo">
+          <image src="/images/class/checkedTrue.png" class="search_icon" />
+          <view class="modalBoxThree">不限</view>
+          <view class="modalBoxFour">全部设计师作品</view>
+        </view>
+        <view class="designerListBigDiv" wx:for='{{designerList}}' wx:key="item.id">
+          <view class="designerListDivOne">
+            <view class="designerListDivOneImg"></view>
+          </view>
+          <view class="designerListDivTwo">
+            <view class="designerListDivTwoTxt">
+              <view class="designerName">{{item.name}}</view>
+              <view class="designerListDivTwoLine">
+                <view class="designerSex">{{item.sex}}</view>
+                <view class="designerCity">{{item.city}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="designerListDivThree">
+            <view class="designerListDivThreeTxt" bindtap="designerDetailShow">>资料</view>
+          </view>
+        </view>
+      </view>
+      <view class="modalBoxBottom">
+        <view class="boxBottomLeft">全部重置</view>
+        <view class="boxBottomRight" bindtap="designerHide">搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class="modal-right" bindtap="designerHide">
+    <image src='/images/class/returnWin.png' class="returnWin" />
+  </view>
+</view>
+<!-- 设计师详情弹出层 -->
+<view class="modal-box" hidden="{{designerDetailFlag}}">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class="modalCC">
+        <view class="modalBoxTop" bindtap="returnDesigner">
+            《 更多设计师
+        </view>
+        <view class="designerListBigDiv">
+          <view class="designerListDivOne">
+            <view class="designerListDivOneImg"></view>
+          </view>
+          <view class="designerListDivTwo">
+            <view class="designerListDivTwoTxt">
+              <view class="designerName">Christy Brinkley</view>
+              <view class="designerListDivTwoLine">
+                <view class="designerSex">女</view>
+                <view class="designerCity">意大利</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="designerTwoDiv">
+          <view class="designerField">
+            <view class="designerFieldPoint">
+              <image src="/images/index/proPoint.png" class="proPoint" />
+            </view>
+            <view class="designerFieldTxt">
+              设计领域
+            </view>
+          </view>
+          <view class="designerFieldTxtTwo">珠宝镶嵌／三维建模</view>
+        </view>
+        <view class="designerTwoDiv">
+          <view class="designerField">
+            <view class="designerFieldPoint">
+              <image src="/images/index/proPoint.png" class="proPoint" />
+            </view>
+            <view class="designerFieldTxt">
+              设计师理念
+            </view>
+          </view>
+          <view class="designerFieldTxtTwo">从Philippe Tournaire这里开始，珠宝打破传统，始创了成为建筑艺术品的历程无论是一对恋人梦想中的小屋，还是某一处值得怀念、铭记着盛大历史时刻的纪念，都被他用令人惊叹的微缩方式，表现在指尖的方寸之间。从Philippe Tournaire这里开始，珠宝打破传统，始创了成为建筑艺术品的历程无论是一对恋人梦想中的小屋，还是某一处值得怀念、铭记着盛大历史时刻的纪念，都被他用令人惊叹的微缩方式，表现在指尖的方寸之间。从Philippe Tournaire这里开始，珠宝打破传统，始创了成为建筑艺术品的历程无论是一对恋人梦想中的小屋，还是某一处值得怀念、铭记着盛大历史时刻的纪念，都被他用令人惊叹的微缩方式。</view>
+        </view>
+      </view>
+      <view class="modalBoxBottom">
+        <view class="boxBottomTwo" bindtap="designerDetailHide">搜索作品</view>
+      </view>
+    </view>
+  </view>
+  <view class="modal-right" bindtap="designerDetailHide">
+    <image src='/images/class/returnWin.png' class="returnWin" />
+  </view>
+</view>

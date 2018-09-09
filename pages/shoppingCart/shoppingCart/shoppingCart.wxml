@@ -1,0 +1,37 @@
+<!--pages/shoppingCart/shoppingCart/shoppingCart.wxml-->
+<template name="shopCart">
+  <view class='shopCartWarp'>
+    <view class='shopCartcontent'>
+        <!-- head -->
+        <view class='shopCartHead'>
+            <view class='picWrap'><image class='shopProduct' src="/images/index/img-bg1.jpg"></image></view>
+            <view class='textWrap'>
+                <view class='shopPirce'>¥ 43998.00</view>
+                <view class='shopNumber'>名称编号：5736866889689</view>
+            </view>
+            <image src='/images/index/Bitmap.png' class='Bitmap' catchtap='cancelShopCart'></image>
+        </view>
+        <!-- middle -->
+        <view class='shopCartMiddle'>
+            <view class='leftBtnWrap'>
+                <view class='shopPapiton'>材质：</view>
+                 <view class='leftBtn'>K金 <image class='backArrow' src='/images/index/back.png'></image></view>
+            </view>
+
+            <view class='rightBtnWrap'>
+                <view class='shopPapiton'>尺寸：</view>
+                <view class='rightBtn'>15 <image class='backArrow' src='/images/index/back.png'></image></view>
+            </view>
+        </view>
+        <!-- foot -->
+        <view class='shopCartFoot'>
+            <view class='computNumber'>数量：</view>
+            <view class='computBtn'>
+                <view class='minus'>-</view>
+                <view class='number'>1</view>
+                <view class='add'>+</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</template>

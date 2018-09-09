@@ -1,0 +1,87 @@
+<import src="/pages/shoppingCart/shoppingCart/shoppingCart.wxml" />
+<view>
+    <view class='topIcon'>
+        <image src="/images/index/icon-shop.png"></image>
+    </view>
+
+    <view class='swiperWrap'>
+      <swiper class="swiper-box"   vertical="{{false}}" current="{{currentSwiper}}" 
+      bindchange="swiperChange" autoplay="true" interval="5000" circular="true">
+        <swiper-item>
+          <image src="/images/index/img-bg1.jpg"/>
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/index/img-bg1.jpg"/>
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/index/img-bg1.jpg"/>
+        </swiper-item>
+      </swiper>
+
+      <!--重置小圆点的样式  -->
+      <view class="dots">  
+          <view class="dot{{0 == currentSwiper ? ' active' : ''}}"></view>  
+          <view class="dot{{1 == currentSwiper ? ' active' : ''}}"></view>  
+          <view class="dot{{2 == currentSwiper ? ' active' : ''}}"></view>  
+      </view> 
+
+      <view class='prodDes'>
+          Serpenti灵蛇耳环耳饰崇自然的设计
+      </view>
+      <view class='proPrice'>
+        ¥ 43998.00
+      </view>
+
+      <view class='proSize'>
+        请选择尺寸/材质：>
+      </view>
+    </view>
+
+    <!-- 商品描述 -->
+    <view class='goodsWrap'>
+        <view class='goodsTitle'>/ 商品描述 /</view>
+        <view class='row'>
+            <view class='col-1'>产品类型：</view>
+            <view class='col-2'>戒指</view>
+        </view>
+        <view class='row'>
+            <view class='col-1'>名称：</view>
+            <view class='col-2'> Serpenti灵蛇耳环耳饰崇自然的设计洋溢极致灵动</view>
+        </view>
+         <view class='row'>
+            <view class='col-1'>材质：</view>
+            <view class='col-2'> K金/PT950/925银</view>
+        </view>
+        <view class='row'>
+            <view class='col-1'>尺寸：</view>
+            <view class='col-2'> 圈号12--28</view>
+        </view>
+
+        <view class='goodsCaption'>
+          <view class='line'></view>
+          <view class='text'>宝石描述</view>
+        </view>
+        <view class='textDes'>
+          首饰富有现代风格并带着优雅的摩纳哥气息， 设计灵感源自摩纳哥以及南法惬意悠然的乐活态度，
+          是个深受爱戴的时尚首饰品牌。凭着她对珠宝创作的满`腔热枕，使品牌于珠宝界获得青睐、深受爱戴。
+        </view>
+
+        <view class='goodsCaption'>
+          <view class='line'></view>
+          <view class='text'>图文详情</view>
+        </view>
+
+        <view class='pictureDes'>
+        
+        </view>
+
+        <!-- 购物车 -->
+        <template is="shopCart" wx-if="{{shopCartState}}"/>
+
+    </view>
+
+    <!-- 底部 -->
+    <view class='footer'>
+        <view bindtap='goShopCart'>放入购物袋</view> <view class='line'>|</view> <view>买单</view>
+    </view>
+</view>

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/product/productDetail/productDetail",
+    "pages/product/productOrder/productOrder",
+    "pages/serach/serach/search",
+    "pages/class/class/class",
+    "pages/me/contact/contact",
+    "pages/designer/subDesignerDisp/subDesignerDisp",
+    "pages/designer/designer/designer",
+    "pages/class/subClassDisp/subClassDisp",
+    "pages/class/diamondRotate/diamondRotate",
+    "pages/class/diamondQuery/diamondQuery",
+    "pages/class/queryResult/queryResult",
+    "pages/class/GIA/GIA",
+    "pages/shop/shop/shop",
+    "pages/me/me/me",
+    "pages/me/orderDetail/orderDetail",
+    "pages/me/order/order",
+    "pages/me/address/address",
+    "pages/me/addAddr/addAddr",
+    "pages/cart/cart/cart",
+    "pages/me/wishList/wishList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#C3A25F",
+    "backgroundColor": "#232321",
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "text": "首頁",
+        "iconPath": "./images/index/icon-index.png",
+        "selectedIconPath": "./images/index/icon-index.png"
+      },
+      {
+        "pagePath": "pages/class/class/class",
+        "text": "分类",
+        "iconPath": "./images/index/icon-class.png",
+        "selectedIconPath": "./images/index/icon-class.png"
+      },
+      {
+        "pagePath": "pages/designer/designer/designer",
+        "text": "设计师款",
+        "iconPath": "./images/index/icon-des.png",
+        "selectedIconPath": "./images/index/icon-des.png"
+      },
+      {
+        "pagePath": "pages/shop/shop/shop",
+        "text": "购物车",
+        "iconPath": "./images/index/icon-shop.png",
+        "selectedIconPath": "./images/index/icon-shop.png"
+      },
+      {
+        "pagePath": "pages/me/me/me",
+        "text": "我的",
+        "iconPath": "./images/index/icon-me.png",
+        "selectedIconPath": "./images/index/icon-me.png"
+      }
+    ]
+  }
+}

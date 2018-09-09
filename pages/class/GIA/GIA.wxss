@@ -1,0 +1,101 @@
+page {
+  background: #fff;
+}
+
+.tit {
+  box-sizing: border-box;
+  padding-top: 308rpx;
+  display: flex;
+  justify-content: center;
+  height: 454rpx;
+  background: #f8f8f8;
+}
+
+.sear {
+  display: flex;
+  align-items: center;
+  width: 654rpx;
+  height: 96rpx;
+  border: 1px solid #e99824;
+}
+
+.sear > image {
+  margin: 0 26rpx;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.searInfo {
+  max-width: 380rpx;
+  overflow-y: auto;
+}
+
+.query {
+  margin-top: 88rpx;
+  width: 470rpx;
+  height: 84rpx;
+  color: #fff;
+  background: #c09e57;
+}
+
+.tag {
+  margin-top: 42rpx;
+  font-size: 20rpx;
+  color: #999;
+  text-align: center;
+}
+
+.keywrap {
+  margin: 0 auto;
+  margin-top: 72rpx;
+  width: 592rpx;
+  height: 340rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.keywrap > view {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 134rpx;
+  height: 108rpx;
+  font-size: 36rpx;
+  color: #D2780E;
+  border: 1px solid #DCDCDC;
+}
+
+.keywrap > view:active {
+  /* opacity: .7 */
+  background: rgb(247, 231, 211);
+  border: none;
+}
+
+.cursor {
+  margin-left: 6rpx;
+  width: 2px;
+  height: 30rpx;
+}
+
+.cursor.blink {
+    animation: blink 1s infinite steps(1, start);
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #999;
+        color: #aaa;
+    }
+    50% {
+        background-color: #bbb; /* not #aaa because it's seem there is Google Chrome bug */
+        color: #999;
+    }
+}

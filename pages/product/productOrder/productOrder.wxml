@@ -1,0 +1,111 @@
+<view>
+    <view class='orderTitle'>商品与配送</view>
+    <!-- 地址 -->
+    <view class='orderAddress'>
+        <view class='selectAdd'>
+            <view class='collect'>
+              <image src="{{checked ? imgStatus.a : imgStatus.b}}" class="search_icon" bindtap='selectCollect'></image>收货地址
+            </view> 
+            <view class='take'>
+              <image src="{{!checked ? imgStatus.a : imgStatus.b}}" class="search_icon" bindtap='selectTake'></image>门店自提
+            </view> 
+            <view class='noSupport'>暂不支持</view>
+        </view>
+        <!--  -->
+        <view class='contactAddr'>
+            <view class='contacts'>
+                <view class='name'>李小君</view>
+                <view class='tel'>13385558903</view>
+                <view class='default'>默认</view>
+            </view>
+            <view class='addrDetail'>
+                广东省 深圳市 盐田区北山道百泰大楼七楼 设计部李小君收
+            </view>
+            <image src='/images/product/Bitmap.png' class='loactionIcon'></image>
+            <image src='/images/product/rightArrow.png' class='arrowIcon'></image>
+        </view>
+    </view>
+    <!--订单详情  -->
+    <view class='orderDetail'>
+        <!-- 头 -->
+        <view class='header'>
+            <view class='picDes'>
+                 <image class='productPic' src="/images/product/Bitmap.png"></image>
+            </view>
+            <view class='productDes'>
+                <view class='detailDes'>Serpenti灵蛇耳环耳饰崇自然的设计洋溢极致灵动</view>
+                <view class='format'>
+                    <view>材质：pt950</view>
+                    <view class='size'>尺寸：15</view>
+                </view>
+                <view class='number'>
+                  <view class='price'>¥ 26998.00</view>
+                  <view class='btnStyle'>
+                    <view class='minu'>-</view>
+                    <view class='value'>1</view>
+                    <view class='add'>+</view>
+                  </view>
+                </view>
+            </view>
+        </view>
+        <!-- 中 -->
+        <view class='middle'>
+          共1件商品
+        </view>
+        <!-- 底 -->
+        <view class='footer'>
+            <view class='noteTile'>留言笔记：</view>
+            <view>
+                <textarea></textarea>
+                <view class='footerDes'>（0/45）</view>
+            </view>
+        </view>
+    </view>
+    <!-- 支付信息 -->
+    <view class='payTitle'> 支付信息 </view>
+    <view class='pay'>
+      <view class='supportWrap'>
+          <view class='support'>请选择在线支付方式</view>
+          <view class='noSupport'>暂不支持货到付款方式</view>
+      </view>
+      <!-- 微信确认 -->
+      <view class='wxConfirm'>
+        <image class='logo' src="/images/product/wx.png"></image>
+        <view class='wxDes'>
+            <view class='first'>微信支付</view>
+            <view class='second'>微信安全支付</view>
+        </view>
+        <view class='circle' bindtap='wxConfirmFun'>
+          <image src='/images/product/Bitmap1.png' wx:if="{{wxChecked}}"></image>
+        </view>
+      </view>
+      <!-- 金额 -->
+      <view class='money'>
+          <view class='centent'>
+              <view class='ul'>
+                 <view class='title'>商品金额：</view>
+                 <view class='text'>¥ 26998.00</view>
+              </view>
+              <view class='ul'>
+                 <view class='title'>运费：</view>
+                 <view class='text'>¥ 0.00</view>
+              </view>
+              <view class='ul'>
+                 <view class='total'>共计：</view>
+                 <view class='totalMoney'>¥ 26998.00</view>
+              </view>
+          </view>
+      </view>
+    </view>
+    <!-- 底部 -->
+    <view class='foot'>
+         <view class='left'>
+            <view class='computWrap'>
+                <view class='comput'>共计：</view>
+                <view class='computMoney'>¥ 26998.00</view>
+            </view>
+            <view class='Number'>共1件商品</view>
+         </view>
+         <view class='right'>支付</view>
+    </view>
+</view>

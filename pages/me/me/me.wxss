@@ -1,0 +1,109 @@
+page {
+  background: #fff;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 380rpx;
+  background: red;
+}
+
+.h-cont {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.h-cont > image {
+  margin-left: 58rpx;
+  background: black;
+  border-radius: 186rpx;
+}
+
+.h-cont > view {
+  margin-left: 68rpx;
+}
+
+.listWrap {
+  padding: 0 30rpx;
+}
+
+.m-item {
+  display: flex;
+  justify-content: space-between;
+  min-height: 170rpx;
+  border-bottom: 1px solid #E5E5E5
+}
+
+.m-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.m-left .ml-tit {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.m-left .ml-num {
+  position: absolute;
+  bottom: 10rpx;
+  font-size: 30rpx;
+  color: #C59F42;
+}
+
+.m-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.m-img .mi-box {
+  
+  position: relative; 
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.m-img .mi-box > image {
+  background: red
+}
+
+.m-img .mi-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10rpx;
+  right: -30rpx; 
+  font-size: 20rpx;
+  line-height: 1;
+  width: 68rpx;
+  height: 28rpx;
+  border-radius: 6rpx;
+  color: #fff;
+  background: #C3A25F;
+}
+
+.m-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-dot > image {
+  background: red
+}
+
+.m-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.m-arrows > image {
+  background: red
+}

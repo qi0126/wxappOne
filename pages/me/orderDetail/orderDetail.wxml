@@ -1,0 +1,64 @@
+<view class='order-top'>
+  <view class='no'>
+    <view class='number'>订单号： 235435765877</view>
+    <view class='s-status'>
+      <view class='dot'></view>
+      <view>待支付</view>
+    </view>
+  </view>
+  <view class='t-time c9'>下单时间：2018-07-26 15:36:39</view>
+</view>
+
+<view class='addr-remark'>
+  <view class='ar-top'>
+    <view class='art-left'><image mode='widthFix' style='width: 68rpx; height: 68rpx; background: red'></image> </view>
+    <view class='art-right'>
+      <view class='artr-tit'><text class='artt-name' >李小君</text><text style='margin-right: 20rpx;'>13385558903</text><view class='def-tag'>默认</view></view>
+      <view class='artr-addr'>广东省 深圳市 盐田区北山道百泰大楼七楼设计部 李小君收</view>
+    </view>
+  </view>
+  <view class='ar-mark'>
+    <view class='arm-left'>留言：</view>
+    <view class='arm-right'>EZ Diamond秉承对完美的追求，致力于为客户甄选至臻至美的钻石</view>
+  </view>
+</view>
+
+<view class='info'>
+  <view class='item' wx:for="{{list}}" >
+    <view class='top oneTop'>
+      <view class='oneTop-img'>
+        <image mode='widthFix' style='width: 220rpx; height: 190rpx '></image>
+      </view>
+
+      <view class='t-right'>
+        <view class='r-tit'>灵蛇耳环耳饰崇自然的 设计洋溢极致灵动设计洋溢极致灵动设计洋溢极致灵动设计洋溢极致灵动</view>
+        <view class='r-exted'>
+          <view class='re-left'>
+            <text> 材质： <text></text>pt950</text>
+            <text> 尺寸：<text></text>15</text>
+          </view>
+          <view class='re-right'>X1</view>
+        </view>
+        <view class='r-price'>¥ 26998.00</view>
+      </view>
+      
+    </view>
+  </view>
+  <view class="info-right">
+    <view class='infor-cont'>
+      <view class='ifc-o'> <text class='c9 f24'>商品金额：</text> <text class='c6 f32'>¥ 26998.00</text> </view>
+      <view class='ifc-t'> <text class='c9 f24'>运费：</text> <text class='c6 f26'>¥ 0.00</text> </view>
+      <view class='ifc-p'> <text class='c3 f28'>共计：</text> <text class='c0 f38'>¥ 26998.00</text> </view>
+    </view>
+  </view>
+</view>
+
+<view class='pay'>
+  <view>支付方式：在线支付</view>
+  <view>配送方式：普通快递</view>
+</view>
+
+<view class='bottom'>
+  <button class='btn btn-default cancalorder'>取消订单</button>
+  <button class='btn btn-default gopay'>去支付</button>
+</view>

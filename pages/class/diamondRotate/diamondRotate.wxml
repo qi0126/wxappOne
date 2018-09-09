@@ -1,0 +1,72 @@
+<view class='params'>
+  <view class='param'>
+    <view class='left'>
+      <view class='l-l'>
+        钻石参数
+        <image src='/images/class/icon-pickeright.png' mode='widthFix' style='width: 18rpx'></image>
+      </view>
+      <view class='l-t'>diamond parameter</view>
+    </view>
+    <view class='right'>
+      <view class='r-top'>
+        <text>克重</text>
+        <text>颜色</text>
+        <text>净度</text>
+        <text>切工</text>
+      </view>
+      <view class='r-bottom'>
+        <text>0.7</text>
+        <text>G</text>
+        <text>VS1</text>
+        <text>EX</text>
+      </view>
+    </view>
+  </view>
+  <view class='price'>
+    <view class='left'>
+      <view class='l-l'>
+        钻石参数
+        <image src='/images/class/icon-pickeright.png' mode='widthFix' style='width: 18rpx'></image>
+      </view>
+      <view class='l-t'>diamond parameter</view>
+    </view>
+    <view class='money'>¥ 10288</view>
+  </view>
+</view>
+
+<view class='hr'>
+  <image src='/images/class/img-hr.png' mode='widthFix' style='width: 690rpx;'></image>
+</view>
+
+<view class='info'>
+  <view class='i-price'>
+    <view style='margin-bottom: 8rpx;'>实时更新国际行情价格，</view>
+    <view>专注
+      <text>高品质</text>钻石服务</view>
+  </view>
+  <view class='realize' catchtap='go4C'>了解钻石4C?</view>
+</view>
+
+
+<view class='rotate'>
+  <view class='r-weight wrap' data-data='1' style="transform: rotate({{rotate1}}deg)" catchtouchstart='touchstart' catchtouchmove='touchmove'>
+    <view class='wul'>
+      <view class='li' wx:for="{{weightList}}" style='transform: rotate({{item.rotate}}deg);'>{{item.num}}</view>
+    </view>
+  </view>
+  <view class='r-color wrap' data-data='2' style="transform: rotate({{rotate2}}deg)" catchtouchstart='touchstart' catchtouchmove='touchmove'>
+    <view class='cul'>
+      <view class='li' wx:for="{{weightList}}" style='transform: rotate({{item.rotate}}deg);'>{{item.num}}</view>
+    </view>
+  </view>
+  <view class='r-neatness wrap' data-data='3' style="transform: rotate({{rotate3}}deg)" catchtouchstart='touchstart' catchtouchmove='touchmove'>
+    <view class='nul'>
+      <view class='li' wx:for="{{weightList}}" style='transform: rotate({{item.rotate}}deg);'>{{item.num}}</view>
+    </view>
+  </view>
+  <view class='r-cut wrap' data-data='4' style="transform: rotate({{rotate4}}deg)" catchtouchstart='touchstart' catchtouchmove='touchmove'>
+    <view class='tul'>
+      <view class='li' wx:for="{{weightList}}" style='transform: rotate({{item.rotate}}deg);'>{{item.num}}</view>
+    </view>
+  </view>
+</view>

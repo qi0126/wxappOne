@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/class/diamondRotate/diamondRotate",
+    "pages/class/4C/4C",
+    "pages/class/GIA/GIA",
     "pages/index/index/index",
     "pages/product/productDetail/productDetail",
     "pages/product/productOrder/productOrder",
@@ -9,10 +12,8 @@
     "pages/designer/subDesignerDisp/subDesignerDisp",
     "pages/designer/designer/designer",
     "pages/class/subClassDisp/subClassDisp",
-    "pages/class/diamondRotate/diamondRotate",
     "pages/class/diamondQuery/diamondQuery",
     "pages/class/queryResult/queryResult",
-    "pages/class/GIA/GIA",
     "pages/shop/shop/shop",
     "pages/me/me/me",
     "pages/me/orderDetail/orderDetail",
